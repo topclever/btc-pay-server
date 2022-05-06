@@ -1,0 +1,229 @@
+/* General and site-wide Bootstrap modifications */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+hr.primary {
+    width: 50px;
+    height: 3px;
+    background: var(--btcpay-primary);
+    display: inline-block;
+}
+
+.no-gutter > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.hide-when-js,
+.input-group-clear {
+    display: none;
+}
+
+.note-editable {
+    color: var(--btcpay-form-text);
+    background-color: var(--btcpay-form-bg);
+}
+
+.wraptextAuto {
+    max-width: 300px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+    .text-md-nowrap {
+        white-space: nowrap;
+    }
+}
+
+@media (min-width: 768px) {
+    .wraptextAuto {
+        max-width: 600px;
+    }
+}
+
+.smMaxWidth {
+    max-width: 150px;
+}
+
+@media (min-width: 768px) {
+    .smMaxWidth {
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .col-xxl-constrain {
+        max-width: 800px;
+    }
+}
+
+a.unobtrusive-link {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+/* Info icons in main headline */
+h2 small .fa-question-circle-o {
+    position: relative;
+    top: -.1rem;
+    font-size: var(--btcpay-font-size-l);
+}
+
+/* Prevent layout from breaking on hyperlinks with very long URLs as the visible text */
+.invoice-details a {
+    word-break: break-word;
+}
+
+#qrCode {
+    padding: 10px;
+    background: white;
+    display: inline-block;
+}
+
+.feedback-icon-loading {
+    color: orange;
+}
+.feedback-icon-success {
+    color: green;
+}
+.feedback-icon-failed {
+    color: red;
+}
+
+.pin-button {
+    height: 135px;
+    margin-top: 20px;
+    background-color: white;
+    border: solid lightgray 4px;
+    cursor: pointer;
+}
+
+.pin-button:hover {
+    background-color: lightgray;
+}
+
+[v-cloak] { display:none }
+[v-cloak-loading] > * { display:none }
+[v-cloak-loading]::before { content: "loading…" }
+
+.list-group-item a:not(.btn) {
+  color: inherit;
+}
+
+.list-group-item .icon-caret-right {
+    flex: 0 0 24px;
+    height: 24px;
+    align-self: center;
+}
+
+.content-wrapper {
+    padding: 50px 0;
+}
+
+@media screen and (min-width: 768px) {
+    .content-wrapper {
+        padding: 75px 0;
+    }
+}
+
+[class*="field-validation"]:not(:empty) {
+    display: inline-block;
+    margin-top: .5rem;
+}
+
+/* Print */
+@media print {
+    .table td,
+    .table th {
+        background: transparent;
+    }
+    .bg-tile.h-100.p-3 {
+        padding: 1rem 0 !important;
+    }
+    .text-print-default {
+        color: inherit !important;
+    }
+    a {
+        text-decoration: none !important;
+    }
+    .toasted-container {
+        display: none !important;
+    }
+    #markStatusDropdownMenuButton {
+        border: 0;
+        background: transparent;
+        padding: 0 !important;
+        color: inherit;
+        font-weight:  var(--btcpay-font-weight-normal);
+        font-size: var(--btcpay-body-font-size);
+    }
+    #markStatusDropdownMenuButton::after {
+        content: none;
+    }
+}
+
+/* Richtext editor */
+.note-editor .table.table-sm {
+    border-collapse: collapse !important;
+}
+
+.note-editor .table.table-sm th,
+.note-editor .table.table-sm td {
+    border: 1px dotted var(--btcpay-neutral-400);
+}
+
+svg.icon {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0 !important;
+}
+
+svg.icon-note {
+  color: var(--btcpay-neutral-500);
+}
+
+/* Services */
+.services-list {
+    display: flex;
+}
+
+.services-list .service {
+    --service-width: 100px;
+    flex: 0 0 var(--service-width);
+    margin: 0 var(--btcpay-space-l) var(--btcpay-space-l) 0;
+    text-align: center;
+}
+
+.services-list .service img {
+    width: var(--service-width);
+    height: var(--service-width);
+}
+
+.services-list .service h6 {
+    margin: var(--btcpay-space-m) 0 0 0;
+}
+
+/* Setup Guide */
+#SetupGuide {
+    max-width: 30em;
+}
+
+#SetupGuide .list-group-item .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 1rem;
+}
+
+#SetupGuide .list-group-item .content {
+    flex: 1;
+    padding: 1rem 0;
+}
